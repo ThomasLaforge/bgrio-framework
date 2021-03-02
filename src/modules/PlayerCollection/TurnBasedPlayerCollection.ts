@@ -1,5 +1,3 @@
-import { ValueCard } from "../Cards/ValueCard";
-import { BasicCardPlayer } from "../Player/BasicCardPlayer";
 import { BasePlayerCollection } from "./BasePlayerCollection";
 
 export abstract class TurnBasedPlayerCollection<Player> extends BasePlayerCollection<Player> {
