@@ -1,6 +1,6 @@
 {
   "name": "bgrio",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Welcome  \r This project is a framework to create boardgames in Typescript, React and SocketIO.\r It my hobby to create some games. I was using Boardgame Arena Studio, on my PHP times. And now, I could use [boardgame.io](https://boardgame.io).",
   "main": "build/index.js",
   "files": [
