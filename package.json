@@ -1,0 +1,19 @@
+{
+  "name": "bgrio",
+  "version": "0.0.1",
+  "description": "Welcome  \r This project is a framework to create boardgames in Typescript, React and SocketIO.\r It my hobby to create some games. I was using Boardgame Arena Studio, on my PHP times. And now, I could use [boardgame.io](https://boardgame.io).",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "\"test\": \"echo \\\"No test specified\\\"\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThomasLaforge/bgrio-framework.git"
+  },
+  "author": "mcpaulo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThomasLaforge/bgrio-framework/issues"
+  },
+  "homepage": "https://github.com/ThomasLaforge/bgrio-framework#readme"
+}
