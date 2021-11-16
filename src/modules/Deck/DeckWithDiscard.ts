@@ -1,7 +1,7 @@
 import { shuffle } from "../tools";
 import { BaseDeck } from "./BaseDeck";
 
-export abstract class DeckWithDiscard<Card> extends BaseDeck<Card> {
+export class DeckWithDiscard<Card> extends BaseDeck<Card> {
     constructor(
         cards: Card[],
         public discard: Card[] = [],

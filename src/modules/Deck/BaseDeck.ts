@@ -1,6 +1,6 @@
 import { shuffle } from "../tools"
 
-export abstract class BaseDeck<Card> {
+export class BaseDeck<Card> {
 
     constructor(
         public cards: Card[],
