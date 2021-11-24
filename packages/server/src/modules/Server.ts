@@ -1,5 +1,5 @@
 import { Socket, Namespace } from "socket.io";
-import { SocketPlayer } from "../../../shared";
+import { SocketPlayer } from "../../../common";
 import { GameTypeClass } from "../common";
 
 export interface ChatMessage {
