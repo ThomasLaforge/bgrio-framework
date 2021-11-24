@@ -9,7 +9,7 @@ export class SocketIoDescriptor {
 
     get allUsernames(): string[] {
         return Object.keys(this.io.sockets.sockets).map(socketId => {
-            let socket = this.io.sockets.sockets[socketId]
+            let socket = this.io.sockets.sockets.get(socketId)
             return (socket as ExtendedSocket).username
         })
     }

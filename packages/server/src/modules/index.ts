@@ -1,19 +1,19 @@
-import * as express from "express";
+import express from "express";
 import { createServer } from "http";
 import { Server } from "socket.io";
 import * as path from 'path'
 
 // My socket
 import { SuperSocket } from './SuperSocket';
-import { ExtendedSocket } from '../Server';
-import { SocketIoDescriptor } from '../SocketIoDescriptor';
+import { ExtendedSocket } from './Server';
+import { SocketIoDescriptor } from './SocketIoDescriptor';
 
 // Events
 import { addLoginEvents } from '../socketEvents/login'
 import { addLobbyEvents } from '../socketEvents/lobby'
 import { addChatEvents } from '../socketEvents/chat'
 
-import { GameCollection } from '../common/modules/GameCollection';
+import { GameCollection } from '@bgrio/common/modules/GameCollection';
 
 import { serverPort } from '../common/modules/Server';
 
@@ -42,7 +42,7 @@ export class BoardGameServer {
         app.use(express.static(clientDirPath));
     
         // render app
-        app.get('/', function (req, res) {
+        app.get('/', (_, res) => {
             res.sendFile(path.join(clientDirPath, 'index.html'));
         });
     

@@ -1,4 +1,5 @@
 import { ExtendedSocket, ExtendedNamespace, DEFAULT_IS_PRIVATE_GAME } from "./Server";
+import { Server } from "socket.io";
 import { SocketPlayer } from "../common/modules/SocketPlayer";
 import { MultiplayerGame } from "../common/modules/MultiplayerGame";
 import { SoloGame } from "../common/modules/SoloGame";
@@ -55,7 +56,7 @@ export class SuperSocket {
         return new SoloGame(gameType, this.socketPlayer)
     }
 
-    get server(): SocketIO.Server { return this.baseSocket.server }
+    get server(): Server { return this.baseSocket.server }
 
     get username(){ return this.baseSocket.username}
     set username(username: string){ this.baseSocket.username = username }

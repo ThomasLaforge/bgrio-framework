@@ -1,6 +1,5 @@
 import { Socket, Namespace } from "socket.io";
-import { SocketPlayer } from "../../../common";
-import { GameTypeClass } from "../common";
+import { SocketPlayer, GameTypeClass} from "@bgrio/common";
 
 export interface ChatMessage {
     username: string,
