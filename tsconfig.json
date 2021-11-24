@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+      /* other options */
+      "baseUrl": "./packages",
+      "paths": {
+        "@bgrio/*": ["./*/src"]
+      }
+    }
+  }

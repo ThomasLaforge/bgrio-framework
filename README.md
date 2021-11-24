@@ -6,6 +6,17 @@ It's my hobby to create some board games. I was using Boardgame Arena Studio, on
 
 But the goal is to do my sandbox main project and use it to be the beta tester of it too ^^
 
+## Road map
+
+Make things tested, make small liveries
+The Monorepo value ?
+- make Typescript work in all the project
+    We need one tsconfig.json file for global and more specific one foreach packages
+    We need to be able to import shared stuffs inside other packages
+- yarn install on all repositories for root
+- create npm package(s) to use parts of the framework
+    should it be only one package or smalls only or the two possibilities 
+
 ## Create a new game
 
 A game is composed of X parts :
