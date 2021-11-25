@@ -1,19 +1,20 @@
 import { Game } from "./Game";
-import { DEFAULT_IS_PRIVATE_GAME, DEFAULT_NB_PLAYER } from "./constants";
-import { SocketPlayer } from "./SocketPlayer";
-import { GameClass } from "./definitions";
+import { DEFAULT_IS_PRIVATE_GAME, DEFAULT_NB_PLAYER } from "../../constants";
+import { SocketPlayer } from "../SocketPlayer";
+import { GameClass } from "../../definitions";
 
 export class MultiplayerGame extends Game {
 
     constructor(
         public gameClass: GameClass,
+        public type: string,
         public nbPlayer = DEFAULT_NB_PLAYER,
         public players: SocketPlayer[] = [],
         public isPrivate = DEFAULT_IS_PRIVATE_GAME,
         public canBeForcedIsFull?: Function,
         private _forcedIsFull = false
     ){
-        super(gameClass)
+        super(gameClass, type)
     }
 
     start(){

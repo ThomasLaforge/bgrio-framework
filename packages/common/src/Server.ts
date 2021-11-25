@@ -4,3 +4,7 @@ export interface ChatMessage {
 }
 
 export const serverPort = process.env.PORT || 3027
+
+export interface Server {
+    socketEvents: any,
+}

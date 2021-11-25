@@ -1,7 +1,7 @@
 import { Client } from './Client';
-import { MultiplayerGame } from './MultiplayerGame';
+import { MultiplayerGame } from './modules/Games/MultiplayerGame';
 import { Server } from './Server';
-import { SoloGame } from './SoloGame';
+import { SoloGame } from './modules/Games/SoloGame';
 
 export type Class = { new(...args: any[]): any; };
 

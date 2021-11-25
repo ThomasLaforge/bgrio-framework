@@ -13,12 +13,13 @@ import { addLoginEvents } from '../socketEvents/login'
 import { addLobbyEvents } from '../socketEvents/lobby'
 import { addChatEvents } from '../socketEvents/chat'
 
-import { GameCollection, serverPort } from '@bgrio/common';
+import { GameCollection, GameModule, serverPort } from '@bgrio/common';
 
 export class BoardGameServer {
 
     constructor(
-        public games: any[]
+        public games: GameModule[],
+        public serveClient = false
     ){}
 
     start(){
@@ -26,25 +27,17 @@ export class BoardGameServer {
         const httpServer = createServer(app);
         const io = new Server(httpServer, { /* options */ });
         
-        let GC = new GameCollection()
-    
+        const GC = new GameCollection()
         let hasLoggedAllSocketEvents = false
     
         // render index page
-        // console.log('dirName =', __dirname, path.join(__dirname, '../../src/client'))
-        const clientDirPath = path.join(__dirname, '../../src/client')
-    
-        // public directory
-        app.use(express.static(clientDirPath));
-    
-        // render app
-        app.get('/', (_, res) => {
-            res.sendFile(path.join(clientDirPath, 'index.html'));
-        });
-    
-        // INFO: naming of "on" events and emit: Category:reach.main_mission/sub_mission_or_state
-        // ex: on Lobby:create_game/success
-        // ex: emit Lobby:player.create_game/success
+        if(this.serveClient){
+            const clientDirPath = path.join(__dirname, '../../src/client')
+            app.use(express.static(clientDirPath));
+            app.get('/', (_, res) => {
+                res.sendFile(path.join(clientDirPath, 'index.html'));
+            });
+        }
     
         io.on('connection', (baseSocket: ExtendedSocket) => {
             const server = new SocketIoDescriptor(io)

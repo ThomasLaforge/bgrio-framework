@@ -1,9 +1,10 @@
-import { GameClass } from "./definitions"
+import { GameClass } from "../../definitions"
 
 export abstract class Game {
 
     constructor(
         public gameClass: GameClass,
+        public type: string,
         public id = Date.now().toString(),
         public gameInstance: any = null,
         public creationDate = Date.now(),

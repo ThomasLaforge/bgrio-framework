@@ -1,7 +1,7 @@
-import { GameLobbyList, GameLobbyListElt } from '../UI'
-import { Game } from './Game';
+import { GameLobbyList, GameLobbyListElt } from '../definitions'
+import { Game } from './Games/Game';
 import { GameTypeClass } from '..';
-import { MultiplayerGame } from './MultiplayerGame';
+import { MultiplayerGame } from './Games/MultiplayerGame';
 
 export class GameCollection {
 
@@ -29,7 +29,7 @@ export class GameCollection {
         // console.log('getGameWithUser', socketId)
         return this.multiplayerGames.find(g => {
             // console.log('game players', g.players)
-            return g.players.filter(p => p.socketid === socketId).length === 1
+            return g.players.filter(p => p.socketId === socketId).length === 1
         })
     }
 
