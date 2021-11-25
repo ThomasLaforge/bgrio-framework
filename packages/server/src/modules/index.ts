@@ -47,7 +47,7 @@ export class BoardGameServer {
         // ex: emit Lobby:player.create_game/success
     
         io.on('connection', (baseSocket: ExtendedSocket) => {
-            const server = new SocketIoDescriptor(baseSocket.server)
+            const server = new SocketIoDescriptor(io)
             let socket = new SuperSocket(baseSocket)
             console.log('a user connected', socket.id);
     
