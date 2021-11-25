@@ -4,11 +4,9 @@ import { SocketPlayer, MultiplayerGame, SoloGame } from "@bgrio/common";
 
 export class SuperSocket {
 
-    public baseSocket: ExtendedSocket
-
-    constructor(socket: ExtendedSocket) {
-        this.baseSocket = socket
-    }
+    constructor(
+        public baseSocket: ExtendedSocket
+    ){}
 
     on(action: string, listener: (...argsListener: any[]) => void){
         this.baseSocket.on(action, (...args) => {
