@@ -27,7 +27,7 @@ A game is composed of X parts :
 - game parameters:
     - icon
     - title
-    - describtion
+    - description
     - player settings
         - min player
         - max player
@@ -108,8 +108,8 @@ my-game
 
 ### What to do now ?
 
-There are a lot of prebuilt game components, for game model, websockets events or even react components. It means you are still completly free to create your game with your patterns but for an easier start, extends them ^^
+There are a lot of prebuilt game components, for game model, web sockets events or even react components. It means you are still completely free to create your game with your patterns but for an easier start, extends them ^^
 You have multiple npm packages to have the perfect toolbox for your game.
-- @bgrio/ui: tsx package with some usefull components. All packaged in a storybook app if you want to see cool components.
+- @bgrio/ui: tsx package with some useful components. All packaged in a storybook app if you want to see cool components.
 - @bgrio/core: ts package with helpers, framework initializer (server and ui)
 - @bgrio/cli: toolbox to generate app, components from example, game skeleton, etc...

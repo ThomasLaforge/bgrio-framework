@@ -17,7 +17,6 @@ import { GameCollection, serverPort } from '@bgrio/common';
 
 export class BoardGameServer {
 
-    
     constructor(
         public games: any[]
     ){}
@@ -43,9 +42,9 @@ export class BoardGameServer {
             res.sendFile(path.join(clientDirPath, 'index.html'));
         });
     
-        // INFO: naming of "on" events and emit: Category:portée.main_mission/sub_mision_or_state
-        // ex: on Lobby:create_game/succes
-        // ex: emit Lobby:player.create_game/succes
+        // INFO: naming of "on" events and emit: Category:reach.main_mission/sub_mission_or_state
+        // ex: on Lobby:create_game/success
+        // ex: emit Lobby:player.create_game/success
     
         io.on('connection', (baseSocket: ExtendedSocket) => {
             const server = new SocketIoDescriptor(baseSocket.server)

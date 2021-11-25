@@ -24,7 +24,7 @@ io.on("connection", (socket) => {
   // to all clients in room1 in namespace "myNamespace"
   io.of("myNamespace").to("room1").emit(/* ... */);
 
-  // to individual socketid (private message)
+  // to individual socketId (private message)
   io.to(socketId).emit(/* ... */);
 
   // to all clients on this node (when using multiple nodes)
