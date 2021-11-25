@@ -1,6 +1,6 @@
-// import {Component} from 'react'
+import { Component } from 'react'
 
 export interface Client {
-    component: any,
-    creationForm: any
+    component: Component,
+    creationForm: Component
 }
