@@ -1,8 +1,5 @@
-import { SuperSocket } from '../SuperSocket';
-import { 
-    GameCollection, 
-    ChatMessage
-} from '../../common';
+import { SuperSocket } from '../modules/SuperSocket';
+import { ChatMessage } from '@bgrio/common';
 
 export const addChatEvents = (socket: SuperSocket) => {    // Chats
     socket.on('chat:send_message', (message: string, channel?: string) => {

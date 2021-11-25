@@ -1,6 +1,10 @@
-import { SuperSocket } from '../SuperSocket';
-import { GameCollection, DEFAULT_IS_PRIVATE_GAME, GameLobbyList } from '../../common';
-import { MultiplayerGame } from '../../common/modules/MultiplayerGame';
+import { SuperSocket } from '../modules/SuperSocket';
+import {
+  GameCollection,
+  DEFAULT_IS_PRIVATE_GAME,
+  GameLobbyList,
+  MultiplayerGame
+} from '@bgrio/common';
 
 export const addLobbyEvents = (socket: SuperSocket, GC: GameCollection) => {
   // connect on game room by matchmaking

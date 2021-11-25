@@ -13,3 +13,10 @@ export interface GameModule {
     client: Client,
     server: Server
 }
+export interface GameLobbyListElt {
+    people: string[]
+    gameId: string
+    isFull: boolean
+}
+
+export type GameLobbyList = GameLobbyListElt[]

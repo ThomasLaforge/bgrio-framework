@@ -1,8 +1,6 @@
 import { ExtendedSocket, ExtendedNamespace, DEFAULT_IS_PRIVATE_GAME } from "./Server";
 import { Server } from "socket.io";
-import { SocketPlayer } from "../common/modules/SocketPlayer";
-import { MultiplayerGame } from "../common/modules/MultiplayerGame";
-import { SoloGame } from "../common/modules/SoloGame";
+import { SocketPlayer, MultiplayerGame, SoloGame } from "@bgrio/common";
 
 export class SuperSocket {
 
@@ -39,10 +37,10 @@ export class SuperSocket {
         this.leave('lobby');
         let room = this.baseSocket.server.to(game.id) as ExtendedNamespace
         room.game = game
-        if(!game.players.find(p => p.socketid === this.id)){
+        if(!game.players.find(p => p.socketId === this.id)){
             game.addPlayer(this.socketPlayer)
         }
-        this.emit('lobby:player.enter_in_game_table', game.type)
+        this.emit('lobby:player.enter_in_game_table', game.id)
         this.baseSocket.to('lobby').emit('lobby:player.new_game');
     }
 

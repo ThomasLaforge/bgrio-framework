@@ -13,10 +13,7 @@ import { addLoginEvents } from '../socketEvents/login'
 import { addLobbyEvents } from '../socketEvents/lobby'
 import { addChatEvents } from '../socketEvents/chat'
 
-import { GameCollection } from '@bgrio/common/modules/GameCollection';
-
-import { serverPort } from '../common/modules/Server';
-
+import { GameCollection, serverPort } from '@bgrio/common';
 
 export class BoardGameServer {
 
