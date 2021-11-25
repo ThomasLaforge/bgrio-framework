@@ -1,17 +1,12 @@
-import { serializable } from 'serializr';
-
 export class SocketPlayer {
-
-    @serializable public surname: string
-    @serializable public socketid: string
-
-    constructor(surname: string, socketid: string){
-        this.surname = surname
-        this.socketid = socketid
-    }
+    
+    constructor(
+        public surname: string, 
+        public socketId: string
+    ){}
 
     isEqual(p: SocketPlayer){
-        return this.socketid === p.socketid
+        return this.socketId === p.socketId
     }
     
 }
