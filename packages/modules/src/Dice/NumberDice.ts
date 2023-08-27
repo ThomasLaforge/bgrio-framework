@@ -1,9 +1,11 @@
-export class NumberDice {
-    constructor(
-        public nbFace = 6
-    ){}
+import Dice from "./Dice";
 
-    roll(){
-        return 1 + Math.floor(Math.random() * this.nbFace)
+export default class NumberDice extends Dice<number>{
+    constructor(
+        nbFace: number
+    ){
+        super(
+            Array.from({length: nbFace}, (_, i) => i + 1)
+        )
     }
 }

@@ -4,11 +4,11 @@ export default class Dice<T> {
     ){}
 
     roll(){
-        const index =  Math.floor(Math.random() * this.nbFace)
+        const index =  Math.floor(Math.random() * this.getNbFace())
         return this.faces[index]
     }
 
-    get nbFace(){
+    getNbFace(){
         return this.faces.length
     }
 }
