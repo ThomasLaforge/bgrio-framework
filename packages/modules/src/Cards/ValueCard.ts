@@ -1,6 +1,6 @@
 import { BaseCard } from "./BaseCard";
 
-export abstract class ValueCard extends BaseCard {
+export abstract class ValueCard extends BaseCard<number> {
 
     constructor(
         public value: number
@@ -12,4 +12,5 @@ export abstract class ValueCard extends BaseCard {
     isEqual(card: ValueCard){
         return card.value === this.value
     }
+
 }

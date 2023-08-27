@@ -1,3 +1,5 @@
-export abstract class BaseCard {
-    abstract isEqual(card: BaseCard): boolean
+export abstract class BaseCard<T> {
+
+    abstract isEqual(card: BaseCard<T>): boolean
+
 }
