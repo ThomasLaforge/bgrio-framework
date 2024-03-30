@@ -12,8 +12,7 @@ export const addLoginEvents = (socket: SuperSocket) => {
     // care of trim + case insensitive
     if(username && server.allUsernames.map( 
       (u: string) => 
-        u && u.toUpperCase()).includes(username.toUpperCase()
-      )
+        u && u.toUpperCase()).findIndex((u) => u === username.toUpperCase()) !== -1
     ){
       socket.emit('login:player.username_already_exists', username)
     }
